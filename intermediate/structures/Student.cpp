@@ -13,6 +13,9 @@ struct Student
     age = a;
     school = s;
    };
+   void printme(){
+    cout<< name << " " << age << " " << school << endl;
+   };
 };
 
 int main(){
