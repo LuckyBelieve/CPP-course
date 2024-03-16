@@ -1,4 +1,5 @@
 #include <iostream>
+using namespace std;
 
 #define MAX_SIZE 100
 
@@ -14,25 +15,25 @@ public:
 
     void push(int element) {
         if (top >= MAX_SIZE - 1) {    // Check if the stack is full
-            std::cout << "Stack Overflow\n";
+            cout << "Stack Overflow\n";
             return;
         }
         array[++top] = element;        // Increment top and add the element to the stack
-        std::cout << "Pushed " << element << " to the stack.\n";
+        cout << "Pushed " << element << " to the stack.\n";
     }
 
     void pop() {
         if (top < 0) {          // Check if the stack is empty
-            std::cout << "Stack Underflow\n";
+            cout << "Stack Underflow\n";
             return;
         }
         int poppedElement = array[top--];   // Decrement top and return the element
-        std::cout << "Popped " << poppedElement << " from the stack.\n";
+        cout << "Popped " << poppedElement << " from the stack.\n";
     }
 
     int peek() {
         if (top < 0) {          // Check if the stack is empty
-            std::cout << "Stack is empty\n";
+            cout << "Stack is empty\n";
             return -1;
         }
         return array[top];      // Return the top element without removing it
@@ -50,12 +51,12 @@ int main() {
     stack.push(20);
     stack.push(30);
 
-    std::cout << "Top element: " << stack.peek() << "\n";
+    cout << "Top element: " << stack.peek() << "\n";
 
     stack.pop();
     stack.pop();
 
-    std::cout << "Top element: " << stack.peek() << "\n";
+    cout << "Top element: " << stack.peek() << "\n";
 
     stack.pop();
     stack.pop(); // Trying to pop from an empty stack

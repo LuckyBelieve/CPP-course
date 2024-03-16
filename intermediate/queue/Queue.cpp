@@ -1,7 +1,7 @@
 #include<iostream>
 #include<bits/stdc++.h>
 using namespace std;
-struct Queue{
+struct Queue{ 
 	int front, rear , capacity;
 	//Dynamic array usage in c++ and using a dynamic and static araray the implementation will sstill e the same
 	int* queue;
